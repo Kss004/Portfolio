@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Brand Section - Editorial style */}
           <div className="md:col-span-6">
             <h3 className="text-2xl font-light text-neutral-100 mb-6">
-              Ayamullah Khan
+              Shashwat
             </h3>
             <p className="text-neutral-300 mb-8 leading-relaxed max-w-md font-light">
               AI Engineer and Full Stack Developer passionate about building intelligent solutions 
@@ -144,7 +144,7 @@ const Footer = () => {
         {/* Bottom Section - Editorial style */}
         <div className="border-t border-white/10 mt-16 pt-8 text-center">
           <p className="text-sm text-neutral-400 font-light">
-            © {currentYear} Ayamullah Khan. All rights reserved.
+            © {currentYear} Shashwat. All rights reserved.
           </p>
         </div>
       </div>

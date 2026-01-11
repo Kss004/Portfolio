@@ -140,7 +140,7 @@ const HeroSection = () => {
             <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-neutral-900/30 border border-white/10">
               <Image
                 src="/images/new.png"
-                alt="Ayamullah Khan"
+                alt="Shashwat"
                 className="object-cover w-full h-full"
                 width={320}
                 height={320}

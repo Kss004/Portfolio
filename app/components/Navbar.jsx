@@ -53,7 +53,7 @@ const Navbar = () => {
           href={"/"}
           className="text-xl md:text-2xl font-light text-neutral-100 hover:text-neutral-300 transition-all duration-300"
         >
-          Ayamullah Khan
+          Shashwat
         </Link>
         
         {/* Desktop Menu - Editorial style */}

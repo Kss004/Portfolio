@@ -11,14 +11,14 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: 'Ayamullah Khan - AI Developer & Data Scientist',
-    template: '%s | Ayamullah Khan'
+    default: 'Shashwat - AI Developer & Data Scientist',
+    template: '%s | Shashwat'
   },
   description: 'AI Developer & Computer Science student building practical solutions that bridge technology and human needs. Specialized in GenAI, Machine Learning, and Web Development.',
   keywords: ['AI Developer', 'Data Scientist', 'Machine Learning', 'GenAI', 'Web Development', 'Computer Science'],
-  authors: [{ name: 'Ayamullah Khan' }],
-  creator: 'Ayamullah Khan',
-  publisher: 'Ayamullah Khan',
+  authors: [{ name: 'Shashwat' }],
+  creator: 'Shashwat',
+  publisher: 'Shashwat',
   formatDetection: {
     email: false,
     address: false,
@@ -32,13 +32,13 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://ayamullah-khan.vercel.app',
-    title: 'Ayamullah Khan - AI Developer & Data Scientist',
+    title: 'Shashwat - AI Developer & Data Scientist',
     description: 'AI Developer & Computer Science student building practical solutions that bridge technology and human needs.',
-    siteName: 'Ayamullah Khan Portfolio',
+    siteName: 'Shashwat Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ayamullah Khan - AI Developer & Data Scientist',
+    title: 'Shashwat - AI Developer & Data Scientist',
     description: 'AI Developer & Computer Science student building practical solutions that bridge technology and human needs.',
   },
   robots: {

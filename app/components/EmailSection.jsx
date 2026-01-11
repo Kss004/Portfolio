@@ -85,7 +85,7 @@ const EmailSection = () => {
             {/* Minimal contact info */}
             <div className="md:col-span-4 text-right space-y-2">
               <p className="text-sm text-neutral-400 uppercase tracking-wider">Email</p>
-              <p className="text-neutral-100 font-light">ayamullahkhan04@gmail.com</p>
+              <p className="text-neutral-100 font-light">shashwat.sandilya@gmail.com</p>
               <p className="text-sm text-neutral-400 uppercase tracking-wider mt-4">Location</p>
               <p className="text-neutral-100 font-light">New Delhi, India</p>
             </div>

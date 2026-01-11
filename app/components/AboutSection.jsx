@@ -220,7 +220,7 @@ const AboutSection = () => {
                   src="/images/IMG_7779.png" 
                   width={400} 
                   height={500} 
-                  alt="Ayamullah Khan"
+                  alt="Shashwat"
                   className="relative w-full h-auto border border-white/10 shadow-2xl"
                 />
                 
@@ -245,7 +245,7 @@ const AboutSection = () => {
                     that bridge technology and human needs.
                   </p>
                   <p className="text-lg font-light text-neutral-200 leading-relaxed">
-                    I'm <span className="text-neutral-100 font-medium">Ayamullah Khan</span>, 
+                    I'm <span className="text-neutral-100 font-medium">Shashwat</span>, 
                     passionate about creating innovative solutions that make a difference.
                   </p>
                 </div>
