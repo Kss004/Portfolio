@@ -79,7 +79,7 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-serif italic"
+            className="text-4xl md:text-5xl font-bold text-neutral-100 mb-6 font-serif italic"
           >
             What People Say
           </motion.h2>
@@ -87,7 +87,7 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed"
+            className="text-neutral-300 text-lg max-w-2xl mx-auto leading-relaxed"
           >
             Testimonials from colleagues, mentors, and clients who have experienced 
             the quality of work and dedication firsthand.
@@ -108,8 +108,8 @@ const TestimonialsSection = () => {
               className="group relative"
             >
               {/* Subtle editorial card glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-100/40 to-pink-100/40 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500"></div>
-              <div className="relative bg-white/60 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 h-full hover:border-purple-200 transition-all duration-300 shadow-sm">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500"></div>
+              <div className="relative bg-neutral-900/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:border-purple-400/40 transition-all duration-300 shadow-sm">
                 {/* Quote icon */}
                 <div className="flex justify-between items-start mb-6">
                   <Quote className="w-8 h-8 text-purple-400" />
@@ -120,15 +120,15 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
                 {/* Content */}
-                <p className="text-gray-700 leading-relaxed mb-8 italic">
+                <p className="text-neutral-200 leading-relaxed mb-8 italic">
                   "{testimonial.content}"
                 </p>
                 {/* Author info */}
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">{testimonial.name}</h4>
-                    <p className="text-gray-500 text-sm font-medium">{testimonial.role}</p>
-                    <p className="text-gray-400 text-sm flex items-center gap-1">
+                    <h4 className="font-semibold text-neutral-100 mb-1">{testimonial.name}</h4>
+                    <p className="text-neutral-300 text-sm font-medium">{testimonial.role}</p>
+                    <p className="text-neutral-400 text-sm flex items-center gap-1">
                       <Building size={14} />
                       {testimonial.company}
                     </p>
@@ -146,9 +146,9 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-white/60 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 max-w-2xl mx-auto shadow-sm">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 font-serif italic">Ready to Work Together?</h3>
-            <p className="text-gray-600 mb-6">
+          <div className="bg-neutral-900/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-2xl mx-auto shadow-sm">
+            <h3 className="text-2xl font-bold text-neutral-100 mb-4 font-serif italic">Ready to Work Together?</h3>
+            <p className="text-neutral-300 mb-6">
               Join these satisfied clients and let's create something amazing together!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -156,13 +156,13 @@ const TestimonialsSection = () => {
                 href="https://calendly.com/ayamk/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 bg-white"
+                className="px-8 py-3 border border-white/20 text-neutral-100 hover:bg-white hover:text-neutral-950 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 bg-transparent"
               >
                 Book a Call
               </Link>
               <Link
                 href="#contact"
-                className="px-8 py-3 border border-purple-400 text-purple-600 hover:bg-purple-50 font-semibold rounded-lg transition-all duration-300 bg-white"
+                className="px-8 py-3 border border-purple-400/60 text-purple-300 hover:bg-purple-500/10 font-semibold rounded-lg transition-all duration-300 bg-transparent"
               >
                 Send Message
               </Link>

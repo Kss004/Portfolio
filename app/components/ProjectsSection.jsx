@@ -136,18 +136,18 @@ const ProjectsSection = () => {
         <div className="mb-20 px-4 xl:px-16">
           <div className="grid md:grid-cols-12 gap-16 items-end">
             <div className="md:col-span-8">
-              <span className="text-sm uppercase tracking-[0.2em] text-gray-500 font-light mb-8 block">
+              <span className="text-sm uppercase tracking-[0.2em] text-neutral-400 font-light mb-8 block">
                 03 — Portfolio
               </span>
-              <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-gray-900 mb-4 leading-[0.8] tracking-tight">
+              <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-neutral-100 mb-4 leading-[0.8] tracking-tight">
                 Featured
               </h2>
-              <h3 className="text-6xl md:text-7xl lg:text-8xl font-serif italic text-gray-400 leading-[0.8] tracking-tight">
+              <h3 className="text-6xl md:text-7xl lg:text-8xl font-serif italic text-neutral-500 leading-[0.8] tracking-tight">
                 Projects
               </h3>
             </div>
             <div className="md:col-span-4">
-              <p className="text-lg text-gray-600 leading-relaxed font-light">
+              <p className="text-lg text-neutral-300 leading-relaxed font-light">
                 A collection of AI-powered applications, machine learning models, and modern web solutions 
                 that showcase my expertise in cutting-edge technology.
               </p>
@@ -232,30 +232,30 @@ const ProjectsSection = () => {
         <div className="mt-32 px-4 xl:px-16">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h3 className="text-4xl md:text-5xl font-light text-gray-900 mb-6 leading-tight">
+              <h3 className="text-4xl md:text-5xl font-light text-neutral-100 mb-6 leading-tight">
                 Interested in 
-                <span className="font-serif italic text-gray-400"> Working Together?</span>
+                <span className="font-serif italic text-neutral-500"> Working Together?</span>
               </h3>
-              <p className="text-lg text-gray-600 leading-relaxed font-light mb-8">
+              <p className="text-lg text-neutral-300 leading-relaxed font-light mb-8">
                 I'm always excited to take on new challenges and collaborate on innovative projects. 
                 Whether it's AI development, machine learning, or full-stack applications, let's create something exceptional.
               </p>
               <Link
                 href="/#contact"
-                className="inline-block border border-gray-900 hover:bg-gray-900 text-gray-900 hover:text-white font-light px-8 py-4 transition-all duration-300"
+                className="inline-block border border-white/20 hover:bg-white text-neutral-100 hover:text-neutral-950 font-light px-8 py-4 transition-all duration-300"
               >
                 <span className="text-sm uppercase tracking-wider">Start Project</span>
               </Link>
             </div>
             <div className="text-right">
-              <div className="text-sm text-gray-500 uppercase tracking-wider mb-4">
+              <div className="text-sm text-neutral-400 uppercase tracking-wider mb-4">
                 Ready to collaborate
               </div>
               <Link
                 href="https://calendly.com/ayamk/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm uppercase tracking-wider text-gray-500 hover:text-gray-900 transition-colors border-b border-transparent hover:border-gray-900"
+                className="text-sm uppercase tracking-wider text-neutral-400 hover:text-white transition-colors border-b border-transparent hover:border-white/60"
               >
                 Schedule Consultation
               </Link>

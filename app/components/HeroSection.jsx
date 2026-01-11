@@ -51,20 +51,20 @@ const HeroSection = () => {
             className="mb-8"
           >
             <div className="relative">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light text-gray-900 leading-[0.8] tracking-tight mb-2">
-                Create your
+              <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light text-neutral-100 leading-[0.8] tracking-tight mb-2">
+                Build your
               </h1>
               <div className="flex flex-wrap items-baseline gap-4">
-                <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-serif italic text-gray-400 leading-[0.8] tracking-tight">
+                <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-serif italic text-neutral-500 leading-[0.8] tracking-tight">
                   <TypeAnimation
                     sequence={[
-                      "app",
+                      "next product",
                       2000,
-                      "vision",
+                      "big idea",
                       2000,
-                      "business",
+                      "digital future",
                       2000,
-                      "website",
+                      "startup",
                       2000,
                     ]}
                     wrapper="span"
@@ -72,7 +72,7 @@ const HeroSection = () => {
                     repeat={Infinity}
                   />
                 </h2>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light text-gray-900 leading-[0.8] tracking-tight">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light text-neutral-100 leading-[0.8] tracking-tight">
                   with me
                 </h1>
               </div>
@@ -87,9 +87,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mb-8 max-w-md"
           >
-            <p className="text-lg text-gray-600 leading-relaxed font-light">
-              AI Engineer & Full Stack Developer building practical solutions 
-              that bridge technology and human needs.
+            <p className="text-lg text-neutral-300 leading-relaxed font-light">
+              AI Engineer & ML engineer building practical, real world solutions 
+              that bridge technology and human needs and solve actual, real world problems.
             </p>
           </motion.div>
 
@@ -100,9 +100,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="mb-12 space-y-1"
           >
-            <div className="text-gray-500 text-sm uppercase tracking-wider">Location</div>
-            <div className="text-gray-900 font-light">New Delhi, India</div>
-            <div className="text-gray-500 text-sm">Available for collaborations</div>
+            <div className="text-neutral-400 text-sm uppercase tracking-wider">Location</div>
+            <div className="text-neutral-100 font-light">New Delhi, India</div>
+            <div className="text-neutral-400 text-sm">Available for collaborations</div>
           </motion.div>
 
           {/* CTA - Editorial Button */}
@@ -114,12 +114,12 @@ const HeroSection = () => {
           >
             <Link
               href="/#contact"
-              className="group border border-gray-900 hover:bg-gray-900 text-gray-900 hover:text-white font-light px-8 py-4 transition-all duration-300"
+              className="group border border-white/20 hover:bg-white text-neutral-100 hover:text-neutral-950 font-light px-8 py-4 transition-all duration-300"
             >
               <span className="text-sm uppercase tracking-wider">Explore</span>
             </Link>
             
-            <div className="text-sm text-gray-800 uppercase tracking-wider">
+            <div className="text-sm text-neutral-300 uppercase tracking-wider">
               Scroll to explore my work
             </div>
           </motion.div>
@@ -134,10 +134,10 @@ const HeroSection = () => {
         >
           <div className="relative">
             {/* Organic gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100/60 via-purple-100/40 to-pink-100/60 rounded-full blur-3xl opacity-80 scale-110"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-3xl opacity-80 scale-110"></div>
             
             {/* Main Image in circle frame like the design */}
-            <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-gradient-to-br from-blue-200/20 to-purple-200/20 border border-gray-200/50">
+            <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-neutral-900/30 border border-white/10">
               <Image
                 src="/images/new.png"
                 alt="Ayamullah Khan"
@@ -156,7 +156,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1.4 }}
-              className="absolute -top-6 -right-8 bg-white/90 backdrop-blur-sm px-3 py-2 text-xs text-gray-500 uppercase tracking-wider border border-gray-200/50"
+              className="absolute -top-6 -right-8 bg-neutral-900/70 backdrop-blur-sm px-3 py-2 text-xs text-neutral-300 uppercase tracking-wider border border-white/10"
             >
               20+ Projects
             </motion.div>
@@ -165,7 +165,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1.6 }}
-              className="absolute -bottom-8 -left-6 bg-white/90 backdrop-blur-sm px-3 py-2 text-xs text-gray-500 uppercase tracking-wider border border-gray-200/50"
+              className="absolute -bottom-8 -left-6 bg-neutral-900/70 backdrop-blur-sm px-3 py-2 text-xs text-neutral-300 uppercase tracking-wider border border-white/10"
             >
               2500+ users
             </motion.div>

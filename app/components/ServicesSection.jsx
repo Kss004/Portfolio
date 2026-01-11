@@ -100,18 +100,18 @@ const ServicesSection = () => {
         <div className="mb-20">
           <div className="grid md:grid-cols-12 gap-16 items-end">
             <div className="md:col-span-8">
-              <span className="text-sm uppercase tracking-[0.2em] text-gray-500 font-light mb-8 block">
+              <span className="text-sm uppercase tracking-[0.2em] text-neutral-400 font-light mb-8 block">
                 02 — Services
               </span>
-              <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-gray-900 mb-4 leading-[0.8] tracking-tight">
+              <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-neutral-100 mb-4 leading-[0.8] tracking-tight">
                 What I
               </h2>
-              <h3 className="text-6xl md:text-7xl lg:text-8xl font-serif italic text-gray-400 leading-[0.8] tracking-tight">
+              <h3 className="text-6xl md:text-7xl lg:text-8xl font-serif italic text-neutral-500 leading-[0.8] tracking-tight">
                 Build
               </h3>
             </div>
             <div className="md:col-span-4 text-right">
-              <p className="text-lg text-gray-600 font-light leading-relaxed">
+              <p className="text-lg text-neutral-300 font-light leading-relaxed">
                 Practical AI solutions and modern web applications that solve real business problems.
               </p>
             </div>
@@ -131,31 +131,31 @@ const ServicesSection = () => {
               className="group relative"
             >
               {/* Subtle editorial card glow */}
-              <div className="relative bg-white/60 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 h-full hover:border-purple-200 transition-all duration-300 shadow-sm">
+              <div className="relative bg-neutral-900/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:border-purple-400/40 transition-all duration-300 shadow-sm">
                 {/* Icon */}
-                <div className="inline-flex p-4 bg-gray-200 mb-6"> 
+                <div className="inline-flex p-4 bg-white/5 text-neutral-300 mb-6"> 
                   {service.icon}
                 </div>
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors font-serif italic">
+                <h3 className="text-2xl font-bold text-neutral-100 mb-4 group-hover:text-purple-300 transition-colors font-serif italic">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-neutral-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 {/* Features */}
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-gray-700">
-                      <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
+                    <li key={featureIndex} className="flex items-center gap-3 text-neutral-200">
+                      <div className="w-2 h-2 bg-white/70 rounded-full"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 {/* Pricing */}
                 <div className="mb-6">
-                  <span className="text-gray-500 text-sm">Starting from</span>
-                  <div className="text-2xl font-bold text-gray-900">
+                  <span className="text-neutral-400 text-sm">Starting from</span>
+                  <div className="text-2xl font-bold text-neutral-100">
                     {service.pricing}
                   </div>
                 </div>
@@ -164,7 +164,7 @@ const ServicesSection = () => {
                   href={service.calendlyLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/btn inline-flex items-center gap-3 px-6 py-3 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 w-full justify-center bg-white"
+                  className="group/btn inline-flex items-center gap-3 px-6 py-3 border border-white/20 text-neutral-100 hover:bg-white hover:text-neutral-950 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 w-full justify-center bg-transparent"
                 >
                   <Calendar size={20} />
                   Schedule Consultation
@@ -181,7 +181,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 font-serif italic">How We Work Together</h3>
+          <h3 className="text-3xl font-bold text-neutral-100 mb-8 font-serif italic">How We Work Together</h3>
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { step: "1", title: "Discovery", desc: "Understanding your needs and goals" },
@@ -190,11 +190,11 @@ const ServicesSection = () => {
               { step: "4", title: "Delivery", desc: "Launching and optimizing your solution" }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-2xl font-bold text-gray-900 mx-auto mb-4">
+                <div className="w-16 h-16 bg-purple-500/15 border border-purple-500/20 rounded-full flex items-center justify-center text-2xl font-bold text-neutral-100 mx-auto mb-4">
                   {item.step}
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2 font-serif italic">{item.title}</h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <h4 className="text-xl font-semibold text-neutral-100 mb-2 font-serif italic">{item.title}</h4>
+                <p className="text-neutral-300 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>

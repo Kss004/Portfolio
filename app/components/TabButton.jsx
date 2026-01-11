@@ -12,8 +12,8 @@ const TabButton = ({ active, selectTab, children }) => {
       onClick={selectTab}
       className={`relative px-0 py-2 font-light transition-all duration-300 text-sm uppercase tracking-wider border-b-2 ${
         active 
-          ? "text-gray-900 border-gray-900" 
-          : "text-gray-500 hover:text-gray-900 border-transparent hover:border-gray-300"
+          ? "text-white border-white/60" 
+          : "text-neutral-400 hover:text-white border-transparent hover:border-white/30"
       }`}
     >
       {children}

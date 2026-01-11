@@ -17,7 +17,7 @@ const SplashCursor = lazy(() => import("../src/blocks/Animations/SplashCursor/Sp
 // Component loading fallback
 const ComponentLoader = () => (
   <div className="min-h-[200px] flex items-center justify-center">
-    <div className="animate-pulse text-gray-400">Loading...</div>
+    <div className="animate-pulse text-neutral-400">Loading...</div>
   </div>
 );
 
@@ -33,8 +33,8 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col bg-white relative overflow-hidden">
-      <div className="fixed inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 pointer-events-none"></div>
+    <main className="flex min-h-screen flex-col relative overflow-hidden bg-transparent text-neutral-100">
+      <div className="fixed inset-0 bg-gradient-to-br from-neutral-950 via-slate-950 to-neutral-900 pointer-events-none"></div>
       
       <Navbar />
       <div className="relative z-10 container mt-7 mx-auto px-6 md:px-20 py-4 space-y-8">

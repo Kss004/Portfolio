@@ -6,7 +6,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
     <div className="group relative h-full transition-all duration-300">
       {/* Editorial layout card */}
-      <div className="bg-white/60 backdrop-blur-sm border border-gray-200/50 overflow-hidden h-full hover:border-gray-300/70 transition-all duration-300">
+      <div className="bg-neutral-900/40 backdrop-blur-sm border border-white/10 overflow-hidden h-full hover:border-white/20 transition-all duration-300">
         {/* Image Container with editorial aspect ratio */}
         <div className="relative h-64 md:h-72 overflow-hidden">
           <Image
@@ -31,7 +31,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
                 href={gitUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-white/90 backdrop-blur-sm border border-gray-200/50 hover:bg-gray-900 hover:text-white transition-all duration-300"
+                className="p-2 bg-neutral-900/70 text-neutral-100 backdrop-blur-sm border border-white/10 hover:bg-white hover:text-neutral-950 transition-all duration-300"
               >
                 <Github className="w-4 h-4" />
               </Link>
@@ -42,7 +42,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
                 href={previewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-white/90 backdrop-blur-sm border border-gray-200/50 hover:bg-gray-900 hover:text-white transition-all duration-300"
+                className="p-2 bg-neutral-900/70 text-neutral-100 backdrop-blur-sm border border-white/10 hover:bg-white hover:text-neutral-950 transition-all duration-300"
               >
                 <ExternalLink className="w-4 h-4" />
               </Link>
@@ -52,10 +52,10 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         
         {/* Content - Editorial Typography */}
         <div className="p-8 flex flex-col h-full">
-          <h3 className="text-xl font-light text-gray-900 mb-4 leading-tight">
+          <h3 className="text-xl font-light text-neutral-100 mb-4 leading-tight">
             {title}
           </h3>
-          <p className="text-gray-600 text-sm leading-relaxed flex-grow font-light">
+          <p className="text-neutral-300 text-sm leading-relaxed flex-grow font-light">
             {description}
           </p>
           
@@ -66,7 +66,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
                 href={gitUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm uppercase tracking-wider text-gray-500 hover:text-gray-900 transition-colors border-b border-transparent hover:border-gray-900"
+                className="text-sm uppercase tracking-wider text-neutral-400 hover:text-white transition-colors border-b border-transparent hover:border-white/60"
               >
                 Code
               </Link>
@@ -77,7 +77,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
                 href={previewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm uppercase tracking-wider text-gray-500 hover:text-gray-900 transition-colors border-b border-transparent hover:border-gray-900"
+                className="text-sm uppercase tracking-wider text-neutral-400 hover:text-white transition-colors border-b border-transparent hover:border-white/60"
               >
                 Demo
               </Link>

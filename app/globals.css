@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 17, 24, 39;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 245, 246, 255;
+  --background-start-rgb: 7, 9, 14;
+  --background-end-rgb: 3, 4, 8;
 }
 
 * {
@@ -20,7 +20,12 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  background: linear-gradient(
+    180deg,
+    rgb(var(--background-start-rgb)) 0%,
+    rgb(var(--background-end-rgb)) 100%
+  );
+  color-scheme: dark;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
@@ -65,28 +70,28 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3f4f6;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #9ca3af;
+  background: rgba(255, 255, 255, 0.14);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
+  background: rgba(255, 255, 255, 0.22);
 }
 
 /* Selection styles */
 ::selection {
-  background: #e5e7eb;
-  color: #111827;
+  background: rgba(168, 85, 247, 0.25);
+  color: rgb(var(--foreground-rgb));
 }
 
 /* Focus styles */
 :focus-visible {
-  outline: 2px solid #6b7280;
-  outline-offset: 2px;
+  outline: 2px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 3px;
 }
 
 /* Typography enhancements for editorial look */

@@ -34,10 +34,10 @@ const LoadingBar = ({ onComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center"
+          className="fixed inset-0 z-[100] bg-neutral-950 flex flex-col items-center justify-center"
         >
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-slate-950 to-neutral-900"></div>
           
           {/* Loading content */}
           <div className="relative z-10 flex flex-col items-center space-y-8">
@@ -48,15 +48,15 @@ const LoadingBar = ({ onComplete }) => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-5xl font-light text-gray-900 tracking-tight mb-2">
+              <h1 className="text-4xl md:text-5xl font-light text-neutral-100 tracking-tight mb-2">
                 pfffff
               </h1>
-              <p className="text-gray-600 font-light">Hang on there..</p>
+              <p className="text-neutral-300 font-light">Hang on there..</p>
             </motion.div>
 
             {/* Progress Bar */}
             <div className="w-80 md:w-96">
-              <div className="relative h-1 bg-gray-200 rounded-full overflow-hidden">
+               <div className="relative h-1 bg-white/10 rounded-full overflow-hidden">
                 <motion.div
                   className="absolute top-0 left-0 h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
                   initial={{ width: 0 }}
@@ -66,7 +66,7 @@ const LoadingBar = ({ onComplete }) => {
               </div>
               
               {/* Progress percentage */}
-              <div className="flex justify-between items-center mt-2 text-sm text-gray-500">
+              <div className="flex justify-between items-center mt-2 text-sm text-neutral-400">
                 <span>Loading assets...</span>
                 <span>{Math.round(progress)}%</span>
               </div>
@@ -77,7 +77,7 @@ const LoadingBar = ({ onComplete }) => {
               {[0, 1, 2].map((i) => (
                 <motion.div
                   key={i}
-                  className="w-2 h-2 bg-gray-400 rounded-full"
+                  className="w-2 h-2 bg-white/25 rounded-full"
                   animate={{
                     scale: [1, 1.2, 1],
                     opacity: [0.5, 1, 0.5],

@@ -56,7 +56,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} dark`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://media.gettyimages.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#07090e" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${inter.className} font-sans`}>
