@@ -24,14 +24,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://ayamullah-khan.vercel.app'),
+  metadataBase: new URL('https://shashwat-portfolio.vercel.app/'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ayamullah-khan.vercel.app',
+    url: 'https://shashwat-portfolio.vercel.app/',
     title: 'Shashwat - AI Developer & Data Scientist',
     description: 'AI Developer & Computer Science student building practical solutions that bridge technology and human needs.',
     siteName: 'Shashwat Portfolio',

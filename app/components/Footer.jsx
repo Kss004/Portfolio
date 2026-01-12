@@ -51,7 +51,7 @@ const Footer = () => {
                 LinkedIn
               </Link>
               <Link 
-                href="https://ayamullah-khan.vercel.app/"
+                href="https://shashwat-portfolio.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm uppercase tracking-wider text-neutral-400 hover:text-neutral-100 transition-colors border-b border-transparent hover:border-white/60"
