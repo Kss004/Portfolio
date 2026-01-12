@@ -7,14 +7,14 @@ const achievementsList = [
   {
     metric: "Projects",
     value: "20+",
-    description: "AI & Web Applications",
+    description: "AI, ML and GenAI Applications",
     subtext: "Delivered across multiple domains",
     icon: Rocket,
     highlight: "Featured"
   },
   {
     metric: "Experience",
-    value: "3+",
+    value: "1.5+",
     description: "Years in Tech",
     subtext: "Continuous learning & innovation",
     icon: GraduationCap,

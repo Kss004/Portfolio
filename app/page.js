@@ -10,7 +10,7 @@ const EmailSection = lazy(() => import("./components/EmailSection"));
 const Footer = lazy(() => import("./components/Footer"));
 const AchievementsSection = lazy(() => import("./components/AchievementsSection"));
 const ServicesSection = lazy(() => import("./components/ServicesSection"));
-const TestimonialsSection = lazy(() => import("./components/TestimonialsSection"));
+
 const ScrollToTop = lazy(() => import("./components/ScrollToTop"));
 const SplashCursor = lazy(() => import("../src/blocks/Animations/SplashCursor/SplashCursor"));
 
@@ -52,9 +52,7 @@ export default function Home() {
           <ProjectsSection />
         </Suspense>
         
-        <Suspense fallback={<ComponentLoader />}>
-          <TestimonialsSection />
-        </Suspense>
+
         
         <Suspense fallback={<ComponentLoader />}>
           <AboutSection />

@@ -14,35 +14,31 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "AI & Machine Learning Solutions",
+      title: "Intelligent AI Systems",
       description: "Custom machine learning models and AI systems for automation, data analysis, and intelligent decision-making. I build practical AI tools that solve real business problems.",
       features: ["Custom ML Models", "Predictive Analytics", "Process Automation", "Computer Vision", "Natural Language Processing"],
-      calendlyLink: "https://calendly.com/ayamk/30min",
-      pricing: "Starting from $500"
+      calendlyLink: "https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01",
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
       title: "Generative AI Applications",
       description: "Modern AI applications using large language models - chatbots, content generators, and intelligent assistants that understand context and provide helpful responses.",
       features: ["Custom Chatbots", "Document Analysis", "Content Generation", "LLM Integration", "AI Assistants"],
-      calendlyLink: "https://calendly.com/ayamk/30min",
-      pricing: "Starting from $800"
+      calendlyLink: "https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01",
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Full-Stack Web Development",
       description: "Modern, responsive websites and web applications built with React, Next.js, and cloud technologies. Fast, reliable, and user-friendly solutions.",
       features: ["React/Next.js Apps", "API Development", "Database Design", "Cloud Deployment", "Performance Optimization"],
-      calendlyLink: "https://calendly.com/ayamk/30min",
-      pricing: "Starting from $300"
+      calendlyLink: "https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01",
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Data Science & Analytics",
       description: "Turn your data into actionable insights through statistical analysis, data visualization, and reporting dashboards that help you make better business decisions.",
       features: ["Data Analysis", "Statistical Modeling", "Business Intelligence", "Data Visualization", "Reporting Dashboards"],
-      calendlyLink: "https://calendly.com/ayamk/30min",
-      pricing: "Starting from $400"
+      calendlyLink: "https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01",
     }
   ];
 
@@ -112,7 +108,7 @@ const ServicesSection = () => {
             </div>
             <div className="md:col-span-4 text-right">
               <p className="text-lg text-neutral-300 font-light leading-relaxed">
-                Practical AI solutions and modern web applications that solve real business problems.
+                Practical AI, Gen ai and Ml solutions that solve real world problems.
               </p>
             </div>
           </div>

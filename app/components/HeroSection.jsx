@@ -113,7 +113,7 @@ const HeroSection = () => {
             className="flex items-center gap-8"
           >
             <Link
-              href="/#contact"
+              href="#projects"
               className="group border border-white/20 hover:bg-white text-neutral-100 hover:text-neutral-950 font-light px-8 py-4 transition-all duration-300"
             >
               <span className="text-sm uppercase tracking-wider">Explore</span>
@@ -158,7 +158,7 @@ const HeroSection = () => {
               transition={{ duration: 1, delay: 1.4 }}
               className="absolute -top-6 -right-8 bg-neutral-900/70 backdrop-blur-sm px-3 py-2 text-xs text-neutral-300 uppercase tracking-wider border border-white/10"
             >
-              20+ Projects
+              20+ Projects &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </motion.div>
 
             <motion.div
@@ -167,7 +167,7 @@ const HeroSection = () => {
               transition={{ duration: 1, delay: 1.6 }}
               className="absolute -bottom-8 -left-6 bg-neutral-900/70 backdrop-blur-sm px-3 py-2 text-xs text-neutral-300 uppercase tracking-wider border border-white/10"
             >
-              2500+ users
+              1000+ users
             </motion.div>
           </div>
         </motion.div>
