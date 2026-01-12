@@ -35,7 +35,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6">
               <Link 
-                href="https://github.com/ayam04"
+                href="https://github.com/Kss004"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm uppercase tracking-wider text-neutral-400 hover:text-neutral-100 transition-colors border-b border-transparent hover:border-white/60"
@@ -43,7 +43,7 @@ const Footer = () => {
                 GitHub
               </Link>
               <Link 
-                href="https://linkedin.com/in/ayam04"
+                href="https://www.linkedin.com/in/kumar-shashwat-sandilya-b75332218/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm uppercase tracking-wider text-neutral-400 hover:text-neutral-100 transition-colors border-b border-transparent hover:border-white/60"
@@ -82,7 +82,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  href="https://drive.google.com/file/d/1qw-CG5YYz_8YhJ26e0e9vqSVBVgqt31W/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1GE1bSnwt2H_4qgWVpb-dRtDAMIFQ2zI2/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-300 hover:text-neutral-100 transition-colors"
@@ -99,7 +99,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link 
-                  href="https://calendly.com/ayamk/30min"
+                  href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-300 hover:text-neutral-100 transition-colors"
@@ -109,7 +109,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  href="https://calendly.com/ayamk/30min"
+                  href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-300 hover:text-neutral-100 transition-colors"
@@ -119,7 +119,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  href="https://calendly.com/ayamk/30min"
+                  href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-300 hover:text-neutral-100 transition-colors"
@@ -129,7 +129,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  href="https://calendly.com/ayamk/30min"
+                  href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-300 hover:text-neutral-100 transition-colors"

@@ -68,7 +68,7 @@ const Navbar = () => {
           
           {/* Minimal CTA Button */}
           <Link
-            href="https://calendly.com/ayamk/30min"
+            href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm uppercase tracking-wider text-neutral-100 transition-colors border-white/40 border-b hover:text-white hover:border-white font-semibold px-4 py-2"

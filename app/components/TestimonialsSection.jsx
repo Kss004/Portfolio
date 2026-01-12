@@ -153,7 +153,7 @@ const TestimonialsSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://calendly.com/ayamk/30min"
+                href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 border border-white/20 text-neutral-100 hover:bg-white hover:text-neutral-950 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 bg-transparent"

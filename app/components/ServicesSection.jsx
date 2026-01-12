@@ -150,7 +150,7 @@ const ServicesSection = () => {
                 </ul>
                 {/* Pricing */}
                 <div className="mb-6">
-                  <span className="text-neutral-400 text-sm">Starting from</span>
+                  <span className="text-neutral-400 text-sm"></span>
                   <div className="text-2xl font-bold text-neutral-100">
                     {service.pricing}
                   </div>
@@ -182,8 +182,8 @@ const ServicesSection = () => {
             {[
               { step: "1", title: "Discovery", desc: "Understanding your needs and goals" },
               { step: "2", title: "Strategy", desc: "Developing the perfect solution approach" },
-              { step: "3", title: "Development", desc: "Building with cutting-edge technology" },
-              { step: "4", title: "Delivery", desc: "Launching and optimizing your solution" }
+              { step: "3", title: "Development", desc: "Building with cutting-edge technology iteratively" },
+              { step: "4", title: "Delivery", desc: "Launching and optimizing the solution" }
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-purple-500/15 border border-purple-500/20 rounded-full flex items-center justify-center text-2xl font-bold text-neutral-100 mx-auto mb-4">

@@ -219,7 +219,7 @@ const ProjectsSection = () => {
               </h3>
               <p className="text-lg text-neutral-300 leading-relaxed font-light mb-8">
                 I'm always excited to take on new challenges and collaborate on innovative projects. 
-                Whether it's AI development, machine learning, or full-stack applications, let's create something exceptional.
+                Whether it's AI development, machine learning, or end to end application, let's create something exceptional.
               </p>
               <Link
                 href="/#contact"
@@ -233,7 +233,7 @@ const ProjectsSection = () => {
                 Ready to collaborate
               </div>
               <Link
-                href="https://calendly.com/ayamk/30min"
+                href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm uppercase tracking-wider text-neutral-400 hover:text-white transition-colors border-b border-transparent hover:border-white/60"

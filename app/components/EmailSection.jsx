@@ -111,7 +111,7 @@ const EmailSection = () => {
               <div className="space-y-6">
                 <div className="group">
                   <Link
-                    href="https://calendly.com/ayamk/30min"
+                    href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block border border-white/10 hover:border-white/20 transition-all duration-300 p-6 bg-neutral-900/40 backdrop-blur-sm"
@@ -129,7 +129,7 @@ const EmailSection = () => {
 
                 <div className="group">
                   <Link
-                    href="https://calendly.com/ayamk/60min"
+                    href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block border border-white/10 hover:border-white/20 transition-all duration-300 p-6 bg-neutral-900/40 backdrop-blur-sm"
@@ -154,14 +154,14 @@ const EmailSection = () => {
               </h3>
               <div className="flex gap-8">
                 <Link 
-                  href="https://github.com/ayam04" 
+                  href="https://github.com/Kss004" 
                   target="_blank"
                   className="text-sm uppercase tracking-wider text-neutral-400 hover:text-neutral-100 transition-colors border-b border-transparent hover:border-white/60"
                 >
                   GitHub
                 </Link>
                 <Link 
-                  href="https://linkedin.com/in/ayam04" 
+                  href="https://www.linkedin.com/in/kumar-shashwat-sandilya-b75332218/" 
                   target="_blank"
                   className="text-sm uppercase tracking-wider text-neutral-400 hover:text-neutral-100 transition-colors border-b border-transparent hover:border-white/60"
                 >

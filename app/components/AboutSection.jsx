@@ -15,7 +15,7 @@ const TAB_DATA = [
               Programming Languages
             </h4>
             <div className="space-y-4">
-              {['Python', 'TypeScrupt', 'JavaScript', 'SQL', 'R', "Java"].map((skill, index) => (
+              {['Python', 'SQL', 'JavaScript', 'TypeScript', 'R', "Java", 'Go'].map((skill, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <div className="w-1 h-6 bg-white/70"></div>
                   <span className="text-neutral-100 font-light">{skill}</span>
@@ -25,10 +25,10 @@ const TAB_DATA = [
           </div>
           <div>
             <h4 className="text-neutral-100 font-light mb-6 text-lg uppercase tracking-wider">
-              AI/ML Frameworks
+              AI/ML and Gen AI Frameworks
             </h4>
             <div className="space-y-4">
-              {['TensorFlow', 'PyTorch', 'Scikit-learn', 'LangChain', 'CrewAI', 'Hugging Face'].map((skill, index) => (
+              {['PyTorch & Deep Learning', 'Scikit-learn & Classical ML', 'Data Engineering', 'Computer Vision', 'Audio AI', 'Agentic AI Systems', 'Hugging Face'].map((skill, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <div className="w-1 h-6 bg-white/70"></div>
                   <span className="text-neutral-100 font-light">{skill}</span>
@@ -43,7 +43,7 @@ const TAB_DATA = [
               Web Development
             </h4>
             <div className="space-y-4">
-              {['React.js', 'Next.js', 'Node.js', 'FastAPI', 'Flask', 'Django'].map((skill, index) => (
+              {['React.js, Next.js, TailwindCSS', "FastAPI, Node.Js", 'Streamlit', 'Rest APIs', 'MongoDB', 'Django'].map((skill, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <div className="w-1 h-6 bg-white/70"></div>
                   <span className="text-neutral-100 font-light">{skill}</span>
@@ -217,7 +217,7 @@ const AboutSection = () => {
               
               <div className="relative">
                 <Image 
-                  src="/images/IMG_7779.png" 
+                  src="/images/IMG_1834.png" 
                   width={400} 
                   height={500} 
                   alt="Shashwat"
@@ -226,8 +226,8 @@ const AboutSection = () => {
                 
                 {/* Floating badge */}
                 <div className="absolute -bottom-6 -right-6 bg-neutral-900/70 backdrop-blur-sm px-6 py-4 text-xs text-neutral-300 uppercase tracking-wider border border-white/10 shadow-lg">
-                  <div className="font-medium text-neutral-100">AI Engineer</div>
-                  <div className="text-neutral-400">& Full Stack Developer</div>
+                  <div className="font-medium text-neutral-100">AI, Gen AI Engineer</div>
+                  <div className="text-neutral-400">& Full Stack Developer </div>
                 </div>
               </div>
             </div>
@@ -256,7 +256,7 @@ const AboutSection = () => {
                   <p className="text-lg font-light text-neutral-200 leading-relaxed">
                     Focused on <span className="text-neutral-100 font-medium">Machine Learning</span>, 
                     <span className="text-neutral-100 font-medium"> Generative AI</span>, and 
-                    <span className="text-neutral-100 font-medium"> Full-Stack Development</span>.
+                    <span className="text-neutral-100 font-medium"> End to End Production ready solutions</span>.
                   </p>
                 </div>
               </div>
