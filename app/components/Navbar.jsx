@@ -1,102 +1,94 @@
 "use client";
+
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import NavLink from "./NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
-import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/app/components/ui/button";
+import { cn } from "@/lib/utils";
+import { NAV_LINKS, PROFILE } from "@/lib/data";
+import ThemeToggle from "./ThemeToggle";
 
-const navLinks = [
-  {
-    title: "About",
-    path: "#about",
-  },
-  {
-    title: "Services",
-    path: "#services",
-  },
-  {
-    title: "Projects",
-    path: "#projects",
-  },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
-];
-
-const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed mx-auto top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-transparent backdrop-blur-lg border-b border-white/10' 
-          : 'bg-transparent backdrop-blur-md border-b border-white/5'
-      }`}
+    <header
+      className={cn(
+        "fixed top-0 inset-x-0 z-50 border-b transition-colors",
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-border"
+          : "bg-background border-transparent"
+      )}
     >
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-3">
+      <nav className="mx-auto flex h-14 max-w-5xl items-center justify-between px-5">
         <Link
-          href={"/"}
-          className="text-xl md:text-2xl font-light text-neutral-100 hover:text-neutral-300 transition-all duration-300"
+          href="/"
+          className="text-sm font-medium tracking-tight text-foreground"
         >
-          Shashwat
+          {PROFILE.name}
+          <span className="text-muted-foreground"> · {PROFILE.role}</span>
         </Link>
-        
-        {/* Desktop Menu - Editorial style */}
-        <div className="menu hidden md:flex md:items-center md:space-x-8" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+
+        <div className="hidden items-center gap-1 md:flex">
+          {NAV_LINKS.map((l) => (
+            <Link
+              key={l.path}
+              href={l.path}
+              className="rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {l.title}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button asChild size="sm" variant="default" className="hidden sm:inline-flex">
+            <a
+              href={PROFILE.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a call
+            </a>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            className="md:hidden"
+            aria-label="Menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="size-4" /> : <Menu className="size-4" />}
+          </Button>
+        </div>
+      </nav>
+
+      {open && (
+        <div className="border-t border-border bg-background md:hidden">
+          <ul className="mx-auto flex max-w-5xl flex-col px-5 py-2">
+            {NAV_LINKS.map((l) => (
+              <li key={l.path}>
+                <Link
+                  href={l.path}
+                  onClick={() => setOpen(false)}
+                  className="block py-2.5 text-sm text-muted-foreground hover:text-foreground"
+                >
+                  {l.title}
+                </Link>
               </li>
             ))}
           </ul>
-          
-          {/* Minimal CTA Button */}
-          <Link
-            href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm uppercase tracking-wider text-neutral-100 transition-colors border-white/40 border-b hover:text-white hover:border-white font-semibold px-4 py-2"
-          >
-            Book Call
-          </Link>
         </div>
-        
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-               className="flex items-center px-3 py-2 text-neutral-300 hover:text-white transition-colors">
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 text-neutral-300 hover:text-white transition-colors"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
-        </div>
-      </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
-    </motion.nav>
+      )}
+    </header>
   );
-};
-
-export default Navbar;
+}

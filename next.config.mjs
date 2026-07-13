@@ -17,6 +17,7 @@ const nextConfig = {
         ],
         formats: ['image/webp', 'image/avif'],
         minimumCacheTTL: 60,
+        qualities: [75, 80, 85],
         dangerouslyAllowSVG: true,
         contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     },

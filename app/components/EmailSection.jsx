@@ -1,255 +1,181 @@
 "use client";
-import { useState } from "react";
-import Link from "next/link";
-import { Calendar } from "lucide-react";
 
-const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState(null);
+import { useState } from "react";
+import { Calendar, Github, Linkedin, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { toast } from "sonner";
+import { Button } from "@/app/components/ui/button";
+import { Input } from "@/app/components/ui/input";
+import { Textarea } from "@/app/components/ui/textarea";
+import { Card, CardContent } from "@/app/components/ui/card";
+import { PROFILE } from "@/lib/data";
+
+export default function ContactSection() {
+  const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setError(null);
-    
+    setSubmitting(true);
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSONdata,
-    };
-
     try {
-      const response = await fetch(endpoint, options);
-      const result = await response.json();
-
-      if (response.ok) {
-        console.log("Message sent successfully:", result);
-        setEmailSubmitted(true);
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        toast.success("Message sent. I'll respond within 24 hours.");
         e.target.reset();
       } else {
-        console.error("Failed to send message:", result);
-        setError("Failed to send message. Please try again or contact me directly.");
+        toast.error("Failed to send. Try again or email me directly.");
       }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      setError("Failed to send message. Please check your connection and try again.");
+    } catch {
+      toast.error("Network error. Please try again.");
     } finally {
-      setIsSubmitting(false);
+      setSubmitting(false);
     }
   };
 
   return (
-    <section
-      id="contact"
-      className="relative py-8 overflow-hidden bg-transparent"
-    >
-      {/* Editorial decorative elements */}
-      <div className="absolute top-20 left-10 w-10 h-10 opacity-8">
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path d="M50 0 L55 35 L90 40 L55 45 L50 80 L45 45 L10 40 L45 35 Z" fill="currentColor" className="text-blue-500"/>
-        </svg>
-      </div>
-      <div className="absolute bottom-32 right-20 w-8 h-8 opacity-8">
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <path d="M50 0 L55 35 L90 40 L55 45 L50 80 L45 45 L10 40 L45 35 Z" fill="currentColor" className="text-pink-500"/>
-        </svg>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Editorial header */}
-        <div className="mb-20">
-          <div className="grid md:grid-cols-12 gap-16 items-end">
-            <div className="md:col-span-8">
-              <span className="text-sm uppercase tracking-[0.2em] text-neutral-400 font-light mb-8 block">
-                04 — Contact
-              </span>
-              <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-neutral-100 mb-4 leading-[0.8] tracking-tight">
-                Let's
-              </h2>
-              <h3 className="text-6xl md:text-7xl lg:text-8xl font-serif italic text-neutral-500 leading-[0.8] tracking-tight">
-                Connect
-              </h3>
-            </div>
-            
-            {/* Minimal contact info */}
-            <div className="md:col-span-4 text-right space-y-2">
-              <p className="text-sm text-neutral-400 uppercase tracking-wider">Email</p>
-              <p className="text-neutral-100 font-light">shashwat.sandilya@gmail.com</p>
-              <p className="text-sm text-neutral-400 uppercase tracking-wider mt-4">Location</p>
-              <p className="text-neutral-100 font-light">New Delhi, India</p>
-            </div>
-          </div>
-          
-          <div className="mt-16 max-w-2xl">
-            <p className="text-lg text-neutral-300 font-light leading-relaxed">
-              Ready to discuss your next project? I'm available for new opportunities and collaborations.
-              Let's build something amazing together using cutting-edge AI and web technologies.
-            </p>
-          </div>
+    <section id="contact" className="border-b border-border">
+      <div className="mx-auto max-w-5xl px-5 py-16 md:py-20">
+        <div className="mb-10 flex flex-col gap-2 md:mb-12">
+          <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Contact
+          </span>
+          <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            Let&apos;s talk
+          </h2>
         </div>
 
-        {/* Main content grid - Editorial layout */}
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
-          {/* Contact methods - Editorial style */}
-          <div className="space-y-16">
-            <div>
-              <h3 className="text-xl font-light text-neutral-100 mb-8 tracking-wide">
-                Schedule a Call
-              </h3>
-              
-              <div className="space-y-6">
-                <div className="group">
-                  <Link
-                    href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block border border-white/10 hover:border-white/20 transition-all duration-300 p-6 bg-neutral-900/40 backdrop-blur-sm"
-                  >
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm text-neutral-400 uppercase tracking-wider">30 Minutes</span>
-                      <Calendar className="w-4 h-4 text-neutral-500" />
-                    </div>
-                    <h4 className="text-lg font-light text-neutral-100 mb-2">Quick Chat</h4>
-                    <p className="text-neutral-300 text-sm font-light">
-                      Perfect for initial discussions and project overviews
-                    </p>
-                  </Link>
-                </div>
+        <div className="grid gap-8 md:grid-cols-2 md:gap-12">
+          <div className="space-y-6">
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Open to senior AI engineering roles and contract work. If you have
+              a problem worth solving, send a note or book a call.
+            </p>
 
-                <div className="group">
-                  <Link
-                    href="https://calendly.com/shashwat-sandilya1/30min?back=1&month=2026-01"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block border border-white/10 hover:border-white/20 transition-all duration-300 p-6 bg-neutral-900/40 backdrop-blur-sm"
-                  >
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm text-neutral-400 uppercase tracking-wider">60 Minutes</span>
-                      <Calendar className="w-4 h-4 text-neutral-500" />
-                    </div>
-                    <h4 className="text-lg font-light text-neutral-100 mb-2">Project Deep Dive</h4>
-                    <p className="text-neutral-300 text-sm font-light">
-                      Detailed consultation for complex projects and collaborations
-                    </p>
-                  </Link>
+            <div className="space-y-3">
+              <a
+                href={PROFILE.calendly}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between rounded-lg border border-border p-4 transition-colors hover:border-foreground/20"
+              >
+                <div>
+                  <div className="text-sm font-medium text-foreground">
+                    Book a 30-min call
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    Quick intro or project scoping
+                  </div>
                 </div>
-              </div>
+                <Calendar className="size-4 text-muted-foreground" />
+              </a>
+
+              <a
+                href={`mailto:${PROFILE.email}`}
+                className="flex items-center justify-between rounded-lg border border-border p-4 transition-colors hover:border-foreground/20"
+              >
+                <div>
+                  <div className="text-sm font-medium text-foreground">
+                    {PROFILE.email}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    Direct email
+                  </div>
+                </div>
+                <ArrowRight className="size-4 text-muted-foreground" />
+              </a>
             </div>
 
-            {/* Social links - minimal */}
-            <div>
-              <h3 className="text-xl font-light text-neutral-100 mb-8 tracking-wide">
-                Connect
-              </h3>
-              <div className="flex gap-8">
-                <Link 
-                  href="https://github.com/Kss004" 
+            <div className="flex gap-3">
+              <Button asChild variant="outline" size="sm">
+                <a
+                  href={PROFILE.github}
                   target="_blank"
-                  className="text-sm uppercase tracking-wider text-neutral-400 hover:text-neutral-100 transition-colors border-b border-transparent hover:border-white/60"
+                  rel="noopener noreferrer"
                 >
+                  <Github className="size-4" />
                   GitHub
-                </Link>
-                <Link 
-                  href="https://www.linkedin.com/in/kumar-shashwat-sandilya-b75332218/" 
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="sm">
+                <a
+                  href={PROFILE.linkedin}
                   target="_blank"
-                  className="text-sm uppercase tracking-wider text-neutral-400 hover:text-neutral-100 transition-colors border-b border-transparent hover:border-white/60"
+                  rel="noopener noreferrer"
                 >
+                  <Linkedin className="size-4" />
                   LinkedIn
-                </Link>
-              </div>
+                </a>
+              </Button>
             </div>
           </div>
 
-          {/* Contact Form - Editorial style */}
-          <div className="lg:mt-16">
-            {emailSubmitted ? (
-              <div className="text-center py-16">
-                <div className="mb-8">
-                  <div className="w-1 h-20 bg-white/70 mx-auto mb-6"></div>
-                  <h3 className="text-3xl font-light text-neutral-100 mb-4">Message Sent</h3>
-                  <p className="text-neutral-300 font-light">
-                    Thank you for reaching out. I&apos;ll respond within 24 hours.
-                  </p>
+          <Card className="rounded-lg shadow-none">
+            <CardContent className="p-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="mb-1.5 block text-xs font-medium text-muted-foreground"
+                  >
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="you@company.com"
+                  />
                 </div>
-              </div>
-            ) : (
-              <div>
-                <h3 className="text-xl font-light text-neutral-100 mb-12 tracking-wide">
-                  Send a Message
-                </h3>
-                
-                {error && (
-                  <div className="mb-8 p-4 border border-red-500/30 bg-red-500/10 text-red-200 text-sm">
-                    {error}
-                  </div>
-                )}
-                
-                <form className="space-y-8" onSubmit={handleSubmit}>
-                  <div className="space-y-8">
-                    <div>
-                      <input
-                        name="email"
-                        type="email"
-                        id="email"
-                        required
-                        className="w-full bg-transparent border-0 border-b border-white/15 focus:border-white/40 text-neutral-100 text-lg font-light py-4 px-0 focus:outline-none focus:ring-0 transition-colors placeholder-neutral-500"
-                        placeholder="Your email address"
-                      />
-                    </div>
-                    
-                    <div>
-                      <input
-                        name="subject"
-                        type="text"
-                        id="subject"
-                        required
-                        className="w-full bg-transparent border-0 border-b border-white/15 focus:border-white/40 text-neutral-100 text-lg font-light py-4 px-0 focus:outline-none focus:ring-0 transition-colors placeholder-neutral-500"
-                        placeholder="Subject"
-                      />
-                    </div>
-                    
-                    <div>
-                      <textarea
-                        name="message"
-                        id="message"
-                        required
-                        className="w-full bg-transparent border-0 border-b border-white/15 focus:border-white/40 text-neutral-100 text-lg font-light py-4 px-0 focus:outline-none focus:ring-0 transition-colors placeholder-neutral-500 resize-none"
-                        placeholder="Tell me about your project..."
-                        rows={4}
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="pt-8">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="border border-white/20 hover:bg-white text-neutral-100 hover:text-neutral-950 font-light px-12 py-4 transition-all duration-300 disabled:opacity-50"
-                    >
-                      <span className="text-sm uppercase tracking-wider">
-                        {isSubmitting ? "Sending..." : "Send Message"}
-                      </span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            )}
-          </div>
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="mb-1.5 block text-xs font-medium text-muted-foreground"
+                  >
+                    Subject
+                  </label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    required
+                    placeholder="What's this about?"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="mb-1.5 block text-xs font-medium text-muted-foreground"
+                  >
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    placeholder="Tell me about the problem you're solving."
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  disabled={submitting}
+                  className="w-full"
+                >
+                  {submitting ? "Sending…" : "Send message"}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
   );
-};
-
-export default EmailSection;
+}
