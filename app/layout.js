@@ -14,20 +14,23 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: "Shashwat — Senior AI Engineer",
+    default: "Shashwat — AI Engineer",
     template: "%s | Shashwat",
   },
   description:
-    "Senior AI engineer shipping production GenAI, ML, and full-stack systems. Deep learning, computer vision, audio AI, agentic LLM workflows, and end-to-end deployment.",
+    "AI engineer building production multi-agent systems, RAG pipelines, speech AI, and full-stack infrastructure. Multi-agent orchestration, LLM evaluation, and real-time AI phone screening.",
   keywords: [
-    "Senior AI Engineer",
+    "AI Engineer",
     "Machine Learning Engineer",
     "GenAI",
     "LLM",
     "Production AI",
-    "Computer Vision",
-    "Audio AI",
+    "Multi-Agent Systems",
+    "RAG",
+    "Speech AI",
     "Full Stack",
+    "LangChain",
+    "LangGraph",
   ],
   authors: [{ name: "Shashwat" }],
   creator: "Shashwat",
@@ -39,16 +42,16 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://shashwat-portfolio.vercel.app/",
-    title: "Shashwat — Senior AI Engineer",
+    title: "Shashwat — AI Engineer",
     description:
-      "Senior AI engineer shipping production GenAI, ML, and full-stack systems.",
+      "AI engineer building production multi-agent systems, RAG pipelines, speech AI, and full-stack infrastructure.",
     siteName: "Shashwat",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shashwat — Senior AI Engineer",
+    title: "Shashwat — AI Engineer",
     description:
-      "Senior AI engineer shipping production GenAI, ML, and full-stack systems.",
+      "AI engineer building production multi-agent systems, RAG pipelines, speech AI, and full-stack infrastructure.",
   },
   robots: {
     index: true,

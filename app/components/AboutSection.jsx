@@ -9,7 +9,13 @@ import {
 } from "@/app/components/ui/tabs";
 import { Card, CardContent } from "@/app/components/ui/card";
 import { Badge } from "@/app/components/ui/badge";
-import { SKILLS, EDUCATION, CERTIFICATIONS, PROFILE } from "@/lib/data";
+import {
+  SKILLS,
+  EDUCATION,
+  CERTIFICATIONS,
+  EXPERIENCE,
+  PROFILE,
+} from "@/lib/data";
 
 export default function AboutSection() {
   return (
@@ -41,23 +47,51 @@ export default function AboutSection() {
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               I&apos;m {PROFILE.name}, an AI engineer focused on taking models
-              from research to production. My work spans computer vision, audio
-              AI, generative AI, and full-stack engineering — the last mile
-              matters as much as the model.
+              from research to production. My work spans multi-agent
+              orchestration, RAG pipelines, speech AI, and the full-stack
+              infrastructure to run them — the last mile matters as much as the
+              model.
             </p>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              I care about reliability, evals, and products that hold up in the
-              real world. Notebooks don&apos;t count.
+              I care about reliability, evals, guardrails, and products that
+              hold up in the real world. Notebooks don&apos;t count.
             </p>
 
-            <Tabs defaultValue="skills" className="mt-8">
+            <Tabs defaultValue="experience" className="mt-8">
               <TabsList>
+                <TabsTrigger value="experience">Experience</TabsTrigger>
                 <TabsTrigger value="skills">Skills</TabsTrigger>
                 <TabsTrigger value="education">Education</TabsTrigger>
                 <TabsTrigger value="certifications">
                   Certifications
                 </TabsTrigger>
               </TabsList>
+
+              <TabsContent value="experience" className="mt-6 space-y-6">
+                {EXPERIENCE.map((e) => (
+                  <div key={e.company}>
+                    <div className="flex flex-wrap items-baseline justify-between gap-2">
+                      <h4 className="text-base font-semibold text-foreground">
+                        {e.role} · {e.company}
+                      </h4>
+                      <span className="text-xs text-muted-foreground">
+                        {e.period}
+                      </span>
+                    </div>
+                    <ul className="mt-3 space-y-2">
+                      {e.points.map((p, i) => (
+                        <li
+                          key={i}
+                          className="flex gap-2.5 text-sm leading-relaxed text-muted-foreground"
+                        >
+                          <span className="mt-2 size-1 shrink-0 rounded-full bg-foreground/40" />
+                          {p}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </TabsContent>
 
               <TabsContent value="skills" className="mt-6">
                 <div className="grid gap-5 sm:grid-cols-2">
