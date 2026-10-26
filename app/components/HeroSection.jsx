@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight, MapPin, ChevronDown } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import { Badge } from "@/app/components/ui/badge";
 import { PROFILE } from "@/lib/data";
@@ -23,7 +23,7 @@ export default function HeroSection() {
           </p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
             {PROFILE.tagline} I build practical systems across computer vision,
-            audio AI, agentic LLM workflows, and full-stack — shipped, not just
+            audio AI, agentic LLM workflows, and full-stack. Shipped, not just
             prototyped.
           </p>
 
@@ -51,8 +51,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="md:col-span-5">
-          <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-full border border-border bg-muted">
+        <div className="md:col-span-5">          <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-full border border-border bg-muted">
             <Image
               src="/images/new1.png"
               alt={PROFILE.name}
@@ -64,6 +63,16 @@ export default function HeroSection() {
             />
           </div>
         </div>
+      </div>
+      <div className="flex justify-center pb-6">
+        <a
+          href="#work"
+          aria-label="Scroll to work"
+          className="flex flex-col items-center gap-1 text-muted-foreground/60 transition-colors hover:text-muted-foreground"
+        >
+          <span className="text-[10px] uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="size-4 animate-bounce" />
+        </a>
       </div>
     </section>
   );

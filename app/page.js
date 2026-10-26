@@ -1,25 +1,29 @@
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import StatsSection from "./components/StatsSection";
-import ServicesSection from "./components/ServicesSection";
-import ProjectsSection from "./components/ProjectsSection";
-import AboutSection from "./components/AboutSection";
-import EmailSection from "./components/EmailSection";
-import Footer from "./components/Footer";
+import Header from "./components/site/Header";
+import Spotlight from "./components/site/Spotlight";
+import {
+  Intro,
+  Projects,
+  Experience,
+  Stack,
+  Education,
+  Contact,
+  SiteFooter,
+} from "./components/site/Sections";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <div className="pt-14">
-        <HeroSection />
-        <StatsSection />
-        <ServicesSection />
-        <ProjectsSection />
-        <AboutSection />
-        <EmailSection />
-        <Footer />
-      </div>
-    </main>
+    <div id="top" className="grain min-h-screen overflow-x-clip bg-background text-foreground">
+      <Spotlight />
+      <Header />
+      <main className="relative z-[1] mx-auto max-w-3xl px-5">
+        <Intro />
+        <Projects />
+        <Experience />
+        <Stack />
+        <Education />
+        <Contact />
+        <SiteFooter />
+      </main>
+    </div>
   );
 }

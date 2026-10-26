@@ -98,7 +98,7 @@ export default function Footer() {
 
         <div className="mt-10 border-t border-border pt-6">
           <p className="text-xs text-muted-foreground">
-            © {year} {PROFILE.name}. All rights reserved.
+            Thanks for scrolling. © {year} {PROFILE.name}. All rights reserved.
           </p>
         </div>
       </div>

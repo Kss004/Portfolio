@@ -35,9 +35,25 @@ export default function ProjectCard({
             quality={75}
             loading="lazy"
           />
+          {hasDemo && (
+            <div className="absolute left-3 top-3">
+              <Badge className="gap-1 bg-background/90 font-normal backdrop-blur-sm">
+                <span className="size-1.5 rounded-full bg-emerald-500" />
+                Live
+              </Badge>
+            </div>
+          )}
         </div>
       ) : (
-        <div className="flex aspect-[16/10] w-full items-center justify-center border-b border-border bg-gradient-to-br from-muted to-muted/50 px-6">
+        <div className="relative flex aspect-[16/10] w-full items-center justify-center border-b border-border bg-gradient-to-br from-muted to-muted/50 px-6">
+          {hasDemo && (
+            <div className="absolute left-3 top-3">
+              <Badge className="gap-1 bg-background/90 font-normal backdrop-blur-sm">
+                <span className="size-1.5 rounded-full bg-emerald-500" />
+                Live
+              </Badge>
+            </div>
+          )}
           <div className="flex flex-wrap justify-center gap-1.5 opacity-60">
             {tags.map((t) => (
               <Badge key={t} variant="outline" className="font-mono text-xs">

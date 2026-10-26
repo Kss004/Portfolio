@@ -12,7 +12,6 @@ import { Badge } from "@/app/components/ui/badge";
 import {
   SKILLS,
   EDUCATION,
-  CERTIFICATIONS,
   EXPERIENCE,
   PROFILE,
 } from "@/lib/data";
@@ -49,12 +48,17 @@ export default function AboutSection() {
               I&apos;m {PROFILE.name}, an AI engineer focused on taking models
               from research to production. My work spans multi-agent
               orchestration, RAG pipelines, speech AI, and the full-stack
-              infrastructure to run them — the last mile matters as much as the
+              infrastructure to run them. The last mile matters as much as the
               model.
             </p>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
               I care about reliability, evals, guardrails, and products that
               hold up in the real world. Notebooks don&apos;t count.
+            </p>
+            <p className="mt-4 text-sm italic text-muted-foreground/80">
+              Outside of engineering: I read research papers for fun, break
+              things on purpose to learn how they work, and think good docs are
+              a feature.
             </p>
 
             <Tabs defaultValue="experience" className="mt-8">
@@ -62,9 +66,6 @@ export default function AboutSection() {
                 <TabsTrigger value="experience">Experience</TabsTrigger>
                 <TabsTrigger value="skills">Skills</TabsTrigger>
                 <TabsTrigger value="education">Education</TabsTrigger>
-                <TabsTrigger value="certifications">
-                  Certifications
-                </TabsTrigger>
               </TabsList>
 
               <TabsContent value="experience" className="mt-6 space-y-6">
@@ -89,6 +90,19 @@ export default function AboutSection() {
                         </li>
                       ))}
                     </ul>
+                    {e.tech && (
+                      <div className="mt-3 flex flex-wrap gap-1.5">
+                        {e.tech.map((t) => (
+                          <Badge
+                            key={t}
+                            variant="outline"
+                            className="font-mono text-[10px] font-normal"
+                          >
+                            {t}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </TabsContent>
@@ -137,23 +151,6 @@ export default function AboutSection() {
                     </CardContent>
                   </Card>
                 ))}
-              </TabsContent>
-
-              <TabsContent value="certifications" className="mt-6">
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {CERTIFICATIONS.map((c) => (
-                    <Card key={c.name} className="rounded-lg p-5 shadow-none">
-                      <CardContent className="p-0">
-                        <h4 className="text-sm font-semibold text-foreground">
-                          {c.name}
-                        </h4>
-                        <p className="mt-1 text-xs text-muted-foreground">
-                          {c.note}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
               </TabsContent>
             </Tabs>
           </div>
